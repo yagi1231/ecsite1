@@ -20,8 +20,13 @@ https://circleci.com/signup/
 画面左の`Add Projects`から、potepanecレポジトリ横にある`Set Up Project`を選択します。
 ![set up repo](../images/CI/setup_repo.png)
 
-potepanecレポジトリの`.circleci/config.yml`が読み込まれていることを確認し、次のステップに進むために`Start Building`を選択します。
-![start building](../images/CI/start_building.png)
+`config.yml`を追加するためのステップが表示されていますが、fork元の本家potepanecレポジトリでは既に`.circleci/config.yml`に追加されています。ファイルがあることを確認できれば、次のステップに進むために`Use Existing Config`を選択します。
+
+![start building](../images/CI/start_building.jpg)
+
+※CircleCIのこの画面は仕様が二転三転しており、上記の手順と少し異なるケースがあります。以下のように既にpotepanecレポジトリの`.circleci/config.yml`が読み込まれていて、`Start Building`ボタンしか表示されない場合はそのまま`Start Building`を選択してください。
+
+![start building](../images/CI/start_building_2.png)
 
 CircleCIが`.circleci/config.yml`に記載された手順に従ってビルドを開始する様子が確認できたでしょうか?
 
@@ -29,12 +34,6 @@ CircleCIが`.circleci/config.yml`に記載された手順に従ってビルド�
 
 Pull Request を作成すると、CIの実行結果が画面上で確認できます。
 ![ci result on pr](../images/CI/ci_result_on_pr.png)
-
-### 補足: `.circleci/config.yml`が見つからない方へ
-forkした時期によってはこのファイルがまだ追加されていない可能性があります。
-
-もしファイルが見つからない方は[最新の本家potepanecレポジトリ](https://bitbucket.org/potepancamp/potepanec/src/master/)から対象のファイルをコピーして、ご自身のレポジトリに追加してください。
-追加する際は必ずルートディレクトリ配下に`.circleci/config.yml`という名前で保存するように注意してください。
 
 # Herokuデプロイの準備
 ## 前提
