@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+
 module Potepan
   class ProductsController < ApplicationController
     def show
@@ -7,3 +8,4 @@ module Potepan
     end
   end
 end
+
