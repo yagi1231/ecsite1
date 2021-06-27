@@ -12,7 +12,7 @@ AllCops:
     - "node_modules/**/*"
     - "tmp/**/*"
     - "lib/**/*"
-    - "spec/**/*"
+  
 
     
   DisplayCopNames: true
@@ -20,7 +20,7 @@ AllCops:
 
 # trueかfalseを設定しないと警告が出る
 Style/HashEachMethods:
-  Enabled: true
+  Enabled: truez
 Style/HashTransformKeys:
   Enabled: true
 Style/HashTransformValues:

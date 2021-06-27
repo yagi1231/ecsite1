@@ -7,6 +7,7 @@ RSpec.feature '課題２', type: :feature do
 
   scenario 'showページテスト' do
     # productの詳細ページに遷移
+    binding.pry
     visit potepan_product_path(product.id)
     # ヘッダーが表示されていること
     expect(page).to have_css 'div.header'
