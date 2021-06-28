@@ -20,7 +20,7 @@ AllCops:
 
 # trueかfalseを設定しないと警告が出る
 Style/HashEachMethods:
-  Enabled: truez
+  Enabled: true
 Style/HashTransformKeys:
   Enabled: true
 Style/HashTransformValues:

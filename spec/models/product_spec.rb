@@ -28,7 +28,5 @@ RSpec.feature '課題２', type: :feature do
 
     # 金額の下にproductの説明があること
     expect(page).to have_selector 'p', text: product.description.to_s
-
-  
   end
 end
