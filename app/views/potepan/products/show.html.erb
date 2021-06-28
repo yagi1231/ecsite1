@@ -56,9 +56,9 @@
                   <div id="carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                      <% @product.images.each_with_index do |image, index| %>
-                    　<div class="item <%= "active" if index <= 0 %>" data-thumb="<%= index %>">
-                      <%= image_tag(image.attachment(:product), itemprop: "image") %>
-                    </div>
+                      <div class="item <%= "active" if index <= 0 %>" data-thumb="<%= index %>">
+                       <%= image_tag(image.attachment(:product), itemprop: "image") %>
+                      </div>
                      <% end %>
                     </div>
                   </div>
