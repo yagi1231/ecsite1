@@ -51,6 +51,5 @@ test:
 #
 production:
   <<: *default
-  database: potepanec_2_7_production
-  username: potepanec
-  password: <%= ENV['POTEPANEC_DATABASE_PASSWORD'] %>
+  url: <%= ENV['jawsdb-tetrahedral-18866']&.sub('mysql://b75b988fd582f6:15ae5d3c@us-cdbr-east-04.cleardb.com/heroku_79aad57e3c69171?reconnect=true', 'mysql2://b75b988fd582f6:15ae5d3c@us-cdbr-east-04.cleardb.com/heroku_79aad57e3c69171?reconnect=true') %>
+

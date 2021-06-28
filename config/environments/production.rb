@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -54,7 +56,7 @@ Rails.application.configure do
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
@@ -83,12 +85,23 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
+    logger           = ActiveSupport::Logger.new($stdout)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+   config.active_record.dump_schema_after_migration = false
+  config.paperclip_defaults = {
+        storage: :s3,
+        preserve_files: true,
+        s3_host_name: 's3-ap-northeast-1.amazonaws.com',
+        s3_credentials: {
+          access_key_id: ENV['AKIARPGENCVLFGNLGVVL'],
+          secret_access_key: ENV['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'],
+          s3_region: 'ap-northeast-1'
+        },
+        bucket: 'at19971231'
+      }
 end
