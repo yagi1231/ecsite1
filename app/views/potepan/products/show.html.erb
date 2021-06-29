@@ -55,11 +55,11 @@
                 <div class="media-left productSlider">
                   <div id="carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                     <% @product.images.each_with_index do |image, index| %>
-                      <div class="item <%= "active" if index <= 0 %>" data-thumb="<%= index %>">
-                       <%= image_tag(image.attachment(:product), itemprop: "image") %>
-                      </div>
-                     <% end %>
+                     <% @product.images.each_with_index do |image, i| %>
+                    　　  <div class="item <%= 'active' if i.zero? %>" data-thumb="<%= i %>">
+                   　　　　　　  <%= image_tag(image.attachment(:large)) %>
+                 　　　　　　　　　 </div>
+                　　　　　　　　　　<% end %>
                     </div>
                   </div>
                   <div class="clearfix">
