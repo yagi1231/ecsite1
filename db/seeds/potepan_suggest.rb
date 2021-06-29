@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 [
   'apache',
   'apache for women',
@@ -19,7 +21,7 @@
   'RUBY ON RAILS',
   'RUBY ON RAILS bag',
   'RUBY ON RAILS t-shirt',
-  'TOTE',
+  'TOTE'
 ].each do |keyword|
   Potepan::Suggest.create!(keyword: keyword)
 end

@@ -1,0 +1,54 @@
+inherit_from: .rubocop_airbnb.yml
+
+require:
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - "vendor/**/*"
+    - "bin/**/*"
+    - "db/**/*"
+    - "node_modules/**/*"
+    - "tmp/**/*"
+    - "lib/**/*"
+    
+  DisplayCopNames: true
+  TargetRubyVersion: 2.6
+
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+  
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+  
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 970
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/LineLength:
+  Max: 160
+  Exclude:
+    - "db/migrate/*.rb"
+    
+Metrics/MethodLength:
+  Max: 1100
+  Exclude:
+    - "db/migrate/*.rb"

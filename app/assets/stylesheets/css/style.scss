@@ -448,6 +448,9 @@ a:hover, a:focus {
 }
 
 /*=== 2.1.2 NAVBAR ===*/
+.navbar-header {
+  padding-top:30px;
+}
 @media (min-width: 768px) {
   .navbar-default.navbar-fixed-top {
     margin-bottom: 31px;
@@ -863,6 +866,10 @@ body.bodyColor.container {
 }
 /*=== 2.2 FOOTER ===*/
 /*=== 2.2.1 MAIN FOOTER ===*/
+#footer {
+
+  bottom:0;
+}
 .footer {
   display: block;
   width: 100%;
@@ -2164,31 +2171,34 @@ body.bodyColor.container {
 .pageHeader {
   height: 70px;
 }
-.pageHeader .page-title h2 {
+.page-title {
+  font-size:30px;
+  line-height: 70px;
   color: #797979;
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 0;
 }
+
 @media (max-width: 479px) {
-  .pageHeader .page-title h2 {
+ .page-title  {
     font-size: 12px;
     line-height: 18px;
   }
 }
 @media (min-width: 480px) {
-  .pageHeader .page-title h2 {
+ .page-title  {
     font-size: 12px;
     line-height: 70px;
   }
 }
 @media (min-width: 768px) {
-  .pageHeader .page-title h2 {
-    font-size: 24px;
+  .page-title  {
+    font-size: 20px;
   }
 }
 @media (min-width: 992px) {
-  .pageHeader .page-title h2 {
+  .page-title {
     font-size: 30px;
   }
 }
